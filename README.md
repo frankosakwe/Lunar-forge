@@ -1,13 +1,13 @@
-# Stellar Python SDK
+# Stellar Network Python SDK
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/StellarCN/py-stellar-base/continuous-integration-workflow.yml?branch=main)](https://github.com/StellarCN/py-stellar-base/actions)
-[![Read the Docs](https://img.shields.io/readthedocs/stellar-sdk.svg)](https://stellar-sdk.readthedocs.io/en/latest/)
-[![PyPI - Downloads](https://static.pepy.tech/personalized-badge/stellar-sdk?period=total&units=abbreviation&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pypi.python.org/pypi/stellar-sdk)
-[![Codecov](https://img.shields.io/codecov/c/github/StellarCN/py-stellar-base/main)](https://codecov.io/gh/StellarCN/py-stellar-base)
-[![PyPI](https://img.shields.io/pypi/v/stellar-sdk.svg)](https://pypi.python.org/pypi/stellar-sdk)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/LunarForge-Labs/stellar-network-sdk/continuous-integration-workflow.yml?branch=main)](https://github.com/LunarForge-Labs/stellar-network-sdk/actions)
+[![Read the Docs](https://img.shields.io/readthedocs/stellar-network-sdk.svg)](https://stellar-network-sdk.readthedocs.io/en/latest/)
+[![PyPI - Downloads](https://static.pepy.tech/personalized-badge/stellar-network-sdk?period=total&units=abbreviation&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pypi.python.org/pypi/stellar-network-sdk)
+[![Codecov](https://img.shields.io/codecov/c/github/LunarForge-Labs/stellar-network-sdk/main)](https://codecov.io/gh/LunarForge-Labs/stellar-network-sdk)
+[![PyPI](https://img.shields.io/pypi/v/stellar-network-sdk.svg)](https://pypi.python.org/pypi/stellar-network-sdk)
 [![Stellar Protocol](https://img.shields.io/badge/Stellar%20Protocol-26-blue)](https://developers.stellar.org/docs/learn/fundamentals/stellar-consensus-protocol)
 
-py-stellar-base is a Python library for communicating with
+stellar-network-sdk is a Python library for communicating with
 a [Stellar Horizon server](https://developers.stellar.org/docs/data/apis/horizon) and [Stellar RPC server](https://developers.stellar.org/docs/data/apis/rpc). It is used for building Stellar apps on Python. It supports **Python 3.10+** as
 well as PyPy 3.11.
 
@@ -19,24 +19,24 @@ It provides:
 
 ## Documentation
 
-py-stellar-base's documentation can be found at https://stellar-sdk.readthedocs.io.
+stellar-network-sdk's documentation can be found at https://stellar-network-sdk.readthedocs.io.
 
 ## Installing
 
 ```text
-pip install --upgrade stellar-sdk
+pip install --upgrade stellar-network-sdk
 ```
 
 If you need to use asynchronous, please use the following command to install the required dependencies.
 
 ```text
-pip install --upgrade stellar-sdk[aiohttp]
+pip install --upgrade stellar-network-sdk[aiohttp]
 ```
 
 If you need to [Shamir backup](https://trezor.io/learn/advanced/standards-proposals/what-is-shamir-backup) support, please use the following command to install the required dependencies.
 
 ```
-pip install --upgrade stellar-sdk[shamir]
+pip install --upgrade stellar-network-sdk[shamir]
 ```
 
 We follow [Semantic Versioning 2.0.0](https://semver.org/), and I strongly
@@ -89,11 +89,11 @@ Contributions are welcome! See [CONTRIBUTING.md](./CONTRIBUTING.md) for more det
 
 ## Links
 
-- Document: https://stellar-sdk.readthedocs.io
-- Code: https://github.com/StellarCN/py-stellar-base
-- Examples: https://github.com/StellarCN/py-stellar-base/tree/main/examples
-- Issue tracker: https://github.com/StellarCN/py-stellar-base/issues
-- License: [Apache License 2.0](https://github.com/StellarCN/py-stellar-base/blob/master/LICENSE)
-- Releases: https://pypi.org/project/stellar-sdk/
+- Document: https://stellar-network-sdk.readthedocs.io
+- Code: https://github.com/LunarForge-Labs/stellar-network-sdk
+- Examples: https://github.com/LunarForge-Labs/stellar-network-sdk/tree/main/examples
+- Issue tracker: https://github.com/LunarForge-Labs/stellar-network-sdk/issues
+- License: [Apache License 2.0](https://github.com/LunarForge-Labs/stellar-network-sdk/blob/master/LICENSE)
+- Releases: https://pypi.org/project/stellar-network-sdk/
 
-Thank you to all the people who have already contributed to py-stellar-base!
+Thank you to all the people who have already contributed to stellar-network-sdk!

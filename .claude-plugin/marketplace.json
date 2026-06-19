@@ -1,21 +1,21 @@
 {
-  "name": "stellarcn",
+  "name": "lunarforge-labs",
   "owner": {
-    "name": "StellarCN"
+    "name": "LunarForge Labs"
   },
   "metadata": {
-    "description": "Agent skills for the Stellar Python SDK (stellar-sdk)."
+    "description": "Agent skills for the Stellar Network Python SDK (stellar-network-sdk)."
   },
   "plugins": [
     {
-      "name": "py-stellar-base",
+      "name": "stellar-network-sdk",
       "source": "./",
-      "description": "Teaches AI coding agents how to build Stellar blockchain applications using stellar-sdk: transactions, operations, Horizon API, Soroban smart contracts, XDR/SCVal, async workflows, and SEP protocols.",
+      "description": "Teaches AI coding agents how to build Stellar blockchain applications using stellar-network-sdk: transactions, operations, Horizon API, Soroban smart contracts, XDR/SCVal, async workflows, and SEP protocols.",
       "version": "15.0.0-beta.0",
       "author": {
-        "name": "overcat"
+        "name": "LunarForge Labs"
       },
-      "homepage": "https://github.com/StellarCN/py-stellar-base",
+      "homepage": "https://github.com/LunarForge-Labs/stellar-network-sdk",
       "license": "Apache-2.0",
       "category": "development",
       "tags": [

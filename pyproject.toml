@@ -1,15 +1,14 @@
 [project]
-name = "stellar-sdk"
-description = "The Python Stellar SDK library provides APIs to build transactions and connect to Horizon and Stellar RPC server."
+name = "stellar-network-sdk"
+description = "The Python Stellar Network SDK library provides APIs to build transactions and connect to Horizon and Stellar RPC server."
 authors = [
-    { name = "overcat", email = "4catcode@gmail.com" },
-    { name = "Eno", email = "appweb.cn@gmail.com" },
+    { name = "LunarForge Labs", email = "dev@lunarforge-labs.com" },
 ]
 dynamic = ["version"]
-maintainers = [{ name = "overcat", email = "4catcode@gmail.com" }]
+maintainers = [{ name = "LunarForge Labs", email = "dev@lunarforge-labs.com" }]
 readme = "README.md"
 keywords = [
-    "stellar-sdk",
+    "stellar-network-sdk",
     "stellar",
     "stellar.org",
     "lumens",
@@ -22,7 +21,6 @@ keywords = [
     "soroban",
     "sdex",
     "trading",
-    "soroban",
     "soroban-rpc",
     "stellar-rpc",
 ]
@@ -52,12 +50,12 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/StellarCN/py-stellar-base"
-Documentation = "https://stellar-sdk.readthedocs.io/"
-Repository = "https://github.com/StellarCN/py-stellar-base"
-Issues = "https://github.com/StellarCN/py-stellar-base/issues"
-Changelog = "https://github.com/StellarCN/py-stellar-base/blob/main/CHANGELOG.md"
-"Bug Tracker" = "https://github.com/StellarCN/py-stellar-base/issues"
+Homepage = "https://github.com/LunarForge-Labs/stellar-network-sdk"
+Documentation = "https://stellar-network-sdk.readthedocs.io/"
+Repository = "https://github.com/LunarForge-Labs/stellar-network-sdk"
+Issues = "https://github.com/LunarForge-Labs/stellar-network-sdk/issues"
+Changelog = "https://github.com/LunarForge-Labs/stellar-network-sdk/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/LunarForge-Labs/stellar-network-sdk/issues"
 
 [project.optional-dependencies]
 aiohttp = ["aiohttp>=3.9.1", "aiohttp-sse-client>=0.2.1"]
