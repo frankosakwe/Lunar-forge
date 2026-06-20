@@ -7,6 +7,10 @@ on:
     types:
       - created
 
+permissions:
+  contents: read
+  id-token: write
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -109,8 +113,6 @@ jobs:
     needs: [lint, type-check, test, integration]
     runs-on: ubuntu-latest
     if: github.event_name == 'release' && github.event.action == 'created'
-    permissions:
-      id-token: write
     steps:
       - uses: actions/checkout@v6.0.2
       - name: Install uv and Python ${{ env.DEFAULT_PYTHON_VERSION }}
