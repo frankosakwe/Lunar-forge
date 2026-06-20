@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DEFAULT_PYTHON_VERSION: "3.14"
+  DEFAULT_PYTHON_VERSION: "3.12"
 
 jobs:
   lint:
@@ -27,8 +27,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
-      - name: Update lockfile
-        run: uv lock
+      - name: Sync dependencies
+        run: uv sync --all-extras
       - name: Run pre-commit
         run: make pre-commit
 
@@ -40,8 +40,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
-      - name: Update lockfile
-        run: uv lock
+      - name: Sync dependencies
+        run: uv sync --all-extras
       - name: Run type check
         run: make type-check
 
@@ -56,19 +56,16 @@ jobs:
             { os: "ubuntu-latest", python-version: "3.11" },
             { os: "ubuntu-latest", python-version: "3.12" },
             { os: "ubuntu-latest", python-version: "3.13" },
-            { os: "ubuntu-latest", python-version: "3.14" },
             { os: "ubuntu-latest", python-version: "pypy3.11" },
             { os: "macos-latest", python-version: "3.10" },
             { os: "macos-latest", python-version: "3.11" },
             { os: "macos-latest", python-version: "3.12" },
             { os: "macos-latest", python-version: "3.13" },
-            { os: "macos-latest", python-version: "3.14" },
             { os: "macos-latest", python-version: "pypy3.11" },
             { os: "windows-latest", python-version: "3.10" },
             { os: "windows-latest", python-version: "3.11" },
             { os: "windows-latest", python-version: "3.12" },
             { os: "windows-latest", python-version: "3.13" },
-            { os: "windows-latest", python-version: "3.14" },
           ]
     runs-on: ${{ matrix.platform.os }}
     steps:
@@ -77,8 +74,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ matrix.platform.python-version }}
-      - name: Update lockfile
-        run: uv lock
+      - name: Sync dependencies
+        run: uv sync --all-extras
       - name: Run unit tests
         run: make unit-test
 
@@ -105,8 +102,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
-      - name: Update lockfile
-        run: uv lock
+      - name: Sync dependencies
+        run: uv sync --all-extras
       - name: Run integration tests
         run: make integration-test
       - name: Upload coverage to Codecov
@@ -127,6 +124,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
+      - name: Sync dependencies
+        run: uv sync --all-extras
       - name: Build packages
         run: make package
       - name: Publish package distributions to PyPI
