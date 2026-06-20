@@ -27,6 +27,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
+      - name: Update lockfile
+        run: uv lock
       - name: Run pre-commit
         run: make pre-commit
 
@@ -38,6 +40,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
+      - name: Update lockfile
+        run: uv lock
       - name: Run type check
         run: make type-check
 
@@ -73,6 +77,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ matrix.platform.python-version }}
+      - name: Update lockfile
+        run: uv lock
       - name: Run unit tests
         run: make unit-test
 
@@ -99,6 +105,8 @@ jobs:
         uses: astral-sh/setup-uv@v8.1.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON_VERSION }}
+      - name: Update lockfile
+        run: uv lock
       - name: Run integration tests
         run: make integration-test
       - name: Upload coverage to Codecov

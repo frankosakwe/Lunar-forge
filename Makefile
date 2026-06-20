@@ -38,7 +38,7 @@ XDRS = xdr/Stellar-SCP.x \
 XDR_COMMIT = 68fa1ac55692f68ad2a2ca549d0a283273554439
 
 # Command prefix for running Python tools with uv
-UV_RUN_CMD = uv run --frozen --all-extras
+UV_RUN_CMD = uv run --all-extras
 
 # ==============================================================================
 # Platform-Specific Commands
